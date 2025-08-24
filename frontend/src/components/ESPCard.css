@@ -1,0 +1,27 @@
+.esp-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+/* ESP badge colors */
+.bg-red { background: #ef4444; }
+.bg-blue { background: #3b82f6; }
+.bg-purple { background: #8b5cf6; }
+.bg-orange { background: #f97316; }
+.bg-green { background: #10b981; }
+.bg-gray { background: #6b7280; }
