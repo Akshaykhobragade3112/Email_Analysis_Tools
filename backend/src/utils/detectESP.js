@@ -5,7 +5,6 @@ function norm(s = "") {
 function detectESP(headers = "") {
   const h = norm(headers);
 
-  // Quick vendor pattern checks (domains + signature/header markers)
   const checks = [
     { name: "Gmail", patterns: ["gmail.com", "google.com", "smtp.gmail.com", "x-gm-message-state", "x-google-dkim-signature"] },
     { name: "Outlook/Microsoft 365", patterns: ["outlook.com", "hotmail.com", "protection.outlook.com", "onmicrosoft.com", "x-ms-exchange", "outlook.office365.com"] },
@@ -22,7 +21,6 @@ function detectESP(headers = "") {
     if (patterns.some((p) => h.includes(p))) return name;
   }
 
-  // Fallback: infer from From/Return-Path domain
   const fromMatch =
     h.match(/from:\s*.*?<[^@>\s]+@([^>\s]+)>/i) ||
     h.match(/from:\s*[^<\s]+@([^>\s]+)/i) ||
